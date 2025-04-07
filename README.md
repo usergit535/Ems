@@ -1,2 +1,2 @@
-# Ems
+ Designed and developed a fully responsive task management web app using HTML, CSS, and JavaScript. Key features include task assignment with priorities and due dates, dark mode toggle, progress tracking, login system for employer/employee, and exportable task reports. Optimized for mobile devices.# Ems
 A responsive task management system with dark mode, task assignment, status updates, and progress tracking
