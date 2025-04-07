@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>We Are Wunderkind</h1>
+      <p>Empowering Teams. Managing Smarter.</p>
+      <button onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">
+        Explore Tasks
+      </button>
+    </div>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar" id="main">
+    <h1>Employee Task Manager</h1>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Task Form -->
+  <form class="task-form" id="taskForm">
+    <input type="text" id="employeeName" placeholder="Employee Name" required />
+    <input type="text" id="taskTitle" placeholder="Task Title" required />
+    <input type="date" id="dueDate" required />
+    <select id="priority">
+      <option value="low">Low Priority</option>
+      <option value="medium">Medium Priority</option>
+      <option value="high">High Priority</option>
+    </select>
+    <button type="submit">Assign Task</button>
+  </form>
+
+  <!-- Progress Tracker -->
+  <div class="progress" id="progressTracker">Progress: 0 of 0 tasks completed</div>
+
+  <!-- Task List -->
+  <div class="task-list" id="taskList"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,256 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .dark {
+    background-color: black;
+    color: white;
+  }
+  
+  .hero {
+    background-image: url('team-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hero button:hover {
+    background-color: dodgerblue;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 20px;
+  }
+  
+  .top-bar h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .toggle-btn {
+    padding: 8px 14px;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .task-form {
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .task-form input,
+  .task-form select,
+  .task-form button {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 16px;
+  }
+  
+  .task-form button {
+    background-color: lightcoral;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px;
+  }
+  
+  .task {
+    background-color: honeydew;
+    padding: 18px;
+    border-radius: 14px;
+    border-left: 6px solid lightblue;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .task.completed {
+    background-color: lightgreen; 
+   
+  }
+  
+  .task button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .accept-btn {
+    background-color: gold;
+  }
+  
+  .complete-btn {
+    background-color: lightseagreen;
+    color: white;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
+  .priority-low {
+    color: green;
+  }
+  
+  .priority-medium {
+    color: orange;
+  }
+  
+  .priority-high {
+    color: red; 
+    font-weight: bold;
+  }
+  
+  .progress {
+    background-color: lemonchiffon;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px dashed goldenrod;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .task-form {
+      flex-direction: column;
+    }
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .hero h1 {
+      font-size: 32px;
+    }
+    .hero p {
+      font-size: 16px;
+    }
+  }
+  /* Dark mode styles */
+.dark .top-bar {
+    background-color: #222;
+    color: white;
+  }
+  
+  .dark .task-form {
+    background-color: #333;
+    color: white;
+  }
+  
+  .dark .task-form input,
+  .dark .task-form select {
+    background-color: #444;
+    color: white;
+    border-color: #666;
+  }
+  
+  .dark .task-form button {
+    background-color: #cc6666;
+  }
+  
+  .dark .task {
+    background-color: #2a2a2a;
+    color: white;
+    border-left: 6px solid #1e90ff;
+  }
+  
+  .dark .task.completed {
+    background-color: #356635;
+  }
+  
+  .dark .progress {
+    background-color: #444;
+    color: white;
+    border-color: goldenrod;
+  }
+  
+  .dark .accept-btn {
+    background-color: #bfa133;
+  }
+  
+  .dark .complete-btn {
+    background-color: #228b8b;
+  }
+  
